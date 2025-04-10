@@ -1,0 +1,159 @@
+/* 전체 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'BookkGothic-Bd';
+}
+@font-face {
+  font-family: 'BookkGothic-Bd';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffffff;
+  /* 흰 바탕 */
+  color: #111111;
+  /* 어두운 텍스트 */
+  font-family: 'Swis721 BlkEx BT';
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  /* 세로로 정렬 */
+}
+
+.ment {
+  margin: 30px;
+  font-family: 'BookkGothic-Bd';
+  font-size: 0.9rem;
+}
+
+.container {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-family: 'BookkGothic-Bd';
+  line-height: 1;
+  position: relative;
+  /* 호버시 이미지 위치 조정을 위해 */
+}
+
+.subtitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  /* 마우스를 손 모양으로 변경 */
+}
+
+.date {
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+  color: #5a5a5a;
+  font-family: 'BookkGothic-Bd';
+}
+
+.list-container {
+  width: 85vh;
+  position: absolute;
+  left: 0;
+  bottom: 0vh;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1rem;
+  color: #111;
+  padding: 1rem;
+  font-family: 'BookkGothic-Bd';
+  /* max-width: 100%; */
+}
+
+.list-container p {
+  font-size: 0.6rem;
+  color: #111;
+  max-width: 100%;
+  white-space: normal;
+  /* 줄바꿈 허용 */
+  transition: font-weight 0.3s ease;
+  /* 폰트 두께 변경에 부드러운 전환 효과 추가 */
+}
+
+
+/* 이미지 컨테이너 기본 설정 */
+.image-container {
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  /* 기본적으로 숨김 */
+  visibility: hidden;
+  /* 공간을 차지하지 않도록 숨김 */
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+  /* 서서히 나타나는 효과 */
+}
+
+.hover-image {
+  width: 100%;
+  /* 이미지 크기를 100%로 설정 (필요에 따라 조정) */
+  height: auto;
+  object-fit: cover;
+  /* 이미지를 비율에 맞게 잘라서 표시 */
+}
+
+.ment-wrapper {
+  position: relative;
+  display: inline-block;
+  /* hover 대상 감싸기 */
+}
+
+.ment1 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* 이미지 아래에 위치 */
+  left: 0;
+  background-color: white;
+  padding: 1rem;
+  width: 30rem;
+  /* 원하는 크기로 조정 */
+  font-family: 'BookkGothic-Bd';
+  font-size: 0.7rem;
+  line-height: 1.3;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  /* 화면을 벗어나지 않도록 */
+  max-width: calc(100vw - 2rem);
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
+.mentimg img {
+  width: 80px;
+  margin-top: 20px;
+  margin-right: 13rem;
+  cursor: pointer;
+}
+
+.ment-wrapper:hover .ment1 {
+  display: block;
+}
